@@ -3,10 +3,10 @@
   "version": "3.1.0",
   "description": "Vision2VoiceAI is an AI-powered image-to-speech web application with multilingual accessibility for visually impaired users.",
   "author": "Parshav Singla <parshav769@gmail.com>",
-  "license": "Apache 2.0",
+  "license": "MIT license",
   "repository": {
     "type": "git",
-    "url": "https://github.com/parshav14/Generative-AI-Project"
+    "url": "https://github.com/Parshav14/Img2Audio"
   },
   "keywords": [
     "accessibility",
