@@ -18,12 +18,12 @@ Vision2VoiceAI is an accessibility-focused AI system that transforms images into
 
 ## 🛠 **Features**
 
-* 🖼️ **AI Image Captioning** using the BLIP model
-* 🔉 **Natural Text-to-Speech** using `gTTS`
-* 🌐 **Multi-language support**: English, Hindi, Bengali (expandable)
-* 🎨 **Clean, modern UI** with optional dark mode for visual comfort
-* 📑 **Drag-and-drop image uploads** for quick interaction
-* 🔐 **Accessible interface** designed for low-vision & blind users
+- 🖼️ **AI Image Captioning** using the BLIP model
+- 🔉 **Natural Text-to-Speech** using `gTTS`
+- 🌐 **Multi-language support**: English, Hindi, Bengali (expandable)
+- 🎨 **Clean, modern UI** with optional dark mode for visual comfort
+- 📑 **Drag-and-drop image uploads** for quick interaction
+- 🔐 **Accessible interface** designed for low-vision & blind users
 
 ---
 
@@ -32,8 +32,8 @@ Vision2VoiceAI is an accessibility-focused AI system that transforms images into
 ### **1. 🖥️ Clone the Repository**
 
 ```
-git clone https://github.com/<your-username>/Vision2VoiceAI.git
-cd Vision2VoiceAI
+git clone https://github.com/<your-username>/Img2Audio.git
+
 ```
 
 ---
@@ -69,35 +69,30 @@ Your backend API will run at:
 ## 🗃️ **Project Structure**
 
 ```
-Vision2VoiceAI/
-├── server/            # FastAPI backend
-│   ├── api/routes
-│   ├── models
-│   ├── main.py
-│   └── requirements.txt
-│
-└── client/            # Next.js + Tailwind frontend
-    ├── components
-    ├── pages
-    └── styles
+Img2Audio/
+  ├──server/            # FastAPI backend
+  ├──client/            # Next.js + Tailwind frontend
+  ├──LICENSE
+  └──README.md
+
 ```
 
 ---
 
 ### 🧠 **Frontend Reference**
 
-* Interface layout: `src/components/Layout.js`
-* Image upload workflow: `src/components/ImageUpload.js`
-* Global theme & styles: `src/styles/globals.css`
-* Page routing: `src/pages/`
+- Interface layout: `src/components/Layout.js`
+- Image upload workflow: `src/components/ImageUpload.js`
+- Global theme & styles: `src/styles/globals.css`
+- Page routing: `src/pages/`
 
 ---
 
 ## 🫠 **Upcoming Enhancements**
 
-* 📶 Full offline mode for maximum accessibility
-* 📈 History section to revisit past captions & audio
-* 📱 Mobile (Android) version with cloud sync
+- 📶 Full offline mode for maximum accessibility
+- 📈 History section to revisit past captions & audio
+- 📱 Mobile (Android) version with cloud sync
 
 ---
 
