@@ -110,5 +110,3 @@ This project is licensed under the **MIT License**.
 See the [`LICENSE`](./LICENSE) file for complete terms.
 
 <p align="center"><strong>Created with ❤️ by Parshav Singla</strong></p>
-
----
