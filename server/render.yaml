@@ -1,0 +1,17 @@
+# Render configuration for Vision2VoiceAI Backend
+services:
+  - type: web
+    name: Vision2Voice-ai-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/
+    envVars:
+      - key: MONGO_URL
+        value: your_mongodb_atlas_connection_string
+      - key: DB_NAME
+        value: Vision2Voice_ai
+      - key: CORS_ORIGINS
+        value: https://Vision2Voice-ai.vercel.app

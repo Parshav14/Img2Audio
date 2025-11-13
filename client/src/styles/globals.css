@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Accessibility-focused CSS Variables */
+:root {
+  /* High Contrast Light Theme - WCAG AAA Compliant */
+  --color-background: #ffffff;
+  --color-text: #000000;
+  --color-primary: #0066aa; /* High contrast blue */
+  --color-secondary: #444444;
+  --color-accent: #cc0000; /* High contrast red */
+  --color-card: #f8f9fa;
+  --color-card-border: #333333;
+  --color-input: #ffffff;
+  --color-input-border: #000000;
+  --color-button: #0066aa;
+  --color-button-text: #ffffff;
+  --color-button-hover: #004d82;
+  --color-focus: #ff6600; /* High visibility focus color */
+  --color-success: #008000;
+  --color-error: #cc0000;
+  
+  /* Disabled element colors */
+  --color-disabled-bg: #cccccc;
+  --color-disabled-text: #666666;
+  --color-disabled-border: #999999;
+  
+  /* Font sizes - Normal/Default (typical website size) */
+  --font-size-base: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 32px;
+}
+
+.dark {
+  /* High Contrast Dark Theme - WCAG AAA Compliant */
+  --color-background: #000000;
+  --color-text: #ffffff;
+  --color-primary: #66b3ff; /* High contrast light blue */
+  --color-secondary: #cccccc;
+  --color-accent: #ff6666; /* High contrast light red */
+  --color-card: #1a1a1a;
+  --color-card-border: #666666;
+  --color-input: #1a1a1a;
+  --color-input-border: #ffffff;
+  --color-button: #66b3ff;
+  --color-button-text: #000000;
+  --color-button-hover: #4da6ff;
+  --color-focus: #ffcc00; /* High visibility focus color */
+  --color-success: #00ff00;
+  --color-error: #ff6666;
+  
+  /* Disabled element colors */
+  --color-disabled-bg: #333333;
+  --color-disabled-text: #999999;
+  --color-disabled-border: #666666;
+}
+
+/* High Contrast Theme */
+.high-contrast {
+  --color-background: #000000;
+  --color-text: #ffffff;
+  --color-primary: #ffff00; /* Pure yellow */
+  --color-secondary: #666666; /* Gray background for disabled elements */
+  --color-accent: #ff0000; /* Pure red */
+  --color-card: #000000;
+  --color-card-border: #ffffff;
+  --color-input: #000000;
+  --color-input-border: #ffffff;
+  --color-button: #ffff00;
+  --color-button-text: #000000;
+  --color-button-hover: #ffff66;
+  --color-focus: #00ffff; /* Cyan focus */
+  --color-success: #00ff00;
+  --color-error: #ff0000;
+  
+  /* Disabled element colors for better contrast */
+  --color-disabled-bg: #666666;
+  --color-disabled-text: #ffffff;
+  --color-disabled-border: #cccccc;
+}
+
+/* Large Text Theme - Previous default size */
+.large-text {
+  --font-size-base: 18px;
+  --font-size-lg: 24px;
+  --font-size-xl: 32px;
+  --font-size-2xl: 48px;
+}
+
+/* Extra Large Text Theme - Previous large size */
+.extra-large-text {
+  --font-size-base: 24px;
+  --font-size-lg: 32px;
+  --font-size-xl: 42px;
+  --font-size-2xl: 60px;
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+/* Remove all transitions for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Enhanced Focus Indicators */
+*:focus {
+  outline: 3px solid var(--color-focus) !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 2px var(--color-background), 0 0 0 5px var(--color-focus) !important;
+}
+
+/* Button focus states */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus {
+  outline: 3px solid var(--color-focus) !important;
+  outline-offset: 2px !important;
+}
+
+/* Disabled button styling for accessibility */
+.btn-disabled {
+  background-color: var(--color-disabled-bg) !important;
+  color: var(--color-disabled-text) !important;
+  border-color: var(--color-disabled-border) !important;
+  cursor: not-allowed !important;
+  opacity: 0.7 !important;
+}
+
+/* High contrast specific disabled button styling */
+.high-contrast .btn-disabled {
+  background-color: #333333 !important;
+  color: #cccccc !important;
+  border: 2px solid #666666 !important;
+  opacity: 1 !important;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-primary);
+  color: var(--color-button-text);
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High contrast borders for better visibility */
+.accessibility-border {
+  border: 2px solid var(--color-card-border);
+}
+
+/* Large click targets (minimum 44px) */
+.large-click-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Screen reader only content */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Ensure proper color contrast */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+/* Custom scrollbar for better visibility */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 8px;
+  border: 2px solid var(--color-background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* Print styles for better accessibility */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}

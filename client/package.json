@@ -1,0 +1,44 @@
+{
+  "name": "Vision2Voice-ai",
+  "version": "3.1.0",
+  "description": "Vision2VoiceAI is an AI-powered image-to-speech web application with multilingual accessibility for visually impaired users.",
+  "author": "Parshav Singla <parshav769@gmail.com>",
+  "license": "Apache 2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parshav14/Generative-AI-Project"
+  },
+  "keywords": [
+    "accessibility",
+    "AI",
+    "image-to-speech",
+    "gTTS",
+    "BLIP",
+    "multilingual",
+    "assistive-tech"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "dexie": "^4.0.11",
+    "dexie-react-hooks": "^1.1.7",
+    "framer-motion": "^12.23.12",
+    "lucide-react": "^0.525.0",
+    "next": "^14.2.30",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.7",
+    "@types/react": "19.1.8",
+    "autoprefixer": "^10.4.0",
+    "chalk": "^4.1.2",
+    "figlet": "^1.8.1",
+    "postcss": "^8.4.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "5.8.3"
+  }
+}
